@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-> Elie is a lead developer who mostly participates in helping Rwandan and International startups solve the complex problems with some lines of code. He is currently writing a lot of JavaScript at work, and some Python in my personal projects, and I am contributing to the JAMStack community with Next.js, Gatsby and Nuxt.
+> Elie is a lead developer who mostly participates in helping Rwandan and International startups solve the complex problems with some lines of code. He is currently writing a lot of JavaScript at work, and some Python in his personal projects, and I am contributing to the JAMStack community with Next.js, Gatsby and Nuxt.
 
 On 26th February 2013 ( I was 16 years old ), this is when I found myself passionate about computers in general and it's the same day I wrote my first line of code ( it was a C++ program that returns a sum of two integers ), and I was very happy to see Borland C++ ( the compiler I was using ) telling me that the code compiled successfully). I had a chance to have classmates who were also passionate that time, and I appreciate the way they pushed me to learn and challenged me. I started web development with jQuery and PHP, later on moved to Python, then Js.
 

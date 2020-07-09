@@ -12,10 +12,6 @@ On 26th February 2013 ( I was 16 years old ), this is when I found myself passio
 - Alpha Sadeny Ishimwe
 - Alain Prestige
 
-### People who mentored me throught this journey
-
-- James Bedford
-
 ### People who always challenge me
 
 - Chryce Ahebwa

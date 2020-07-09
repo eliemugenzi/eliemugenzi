@@ -26,6 +26,7 @@ On 26th February 2013 ( I was 16 years old ), this is when I found myself passio
 
 ### My role models (so far)
 
+- Kyle Simpson ( Getify )
 - Thor ( A singapore friend who works at Stripe)
 - Jason LengStorf
 - Nader Dabit

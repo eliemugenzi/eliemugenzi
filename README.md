@@ -1,8 +1,8 @@
 ### Hi there 👋
 
-![](https://github-readme-stats.vercel.app/api?username=eliemugenzi&show_icons=true&count_private=true)
+![](https://github-readme-stats.vercel.app/api?username=eliemugenzi&show_icons=true&count_private=true&theme=dracula)
 
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=eliemugenzi&layout=compact)
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=eliemugenzi&layout=compact&theme=dracula)
 
 
 ### I am Elie Mugenzi

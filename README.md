@@ -1,4 +1,14 @@
 ### Hi there 👋
 
-> Elie is a lead developer who mostly participates in helping Rwandan and International startups solve the complex problems with some lines of code. He is currently writing a lot of JavaScript at work, and some Python in his personal projects, and he is contributing to the JAMStack community with Next.js, Gatsby and Nuxt.
+![](https://github-readme-stats.vercel.app/api?username=eliemugenzi&show_icons=true&count_private=true)
 
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=eliemugenzi&layout=compact)
+
+To get started:
+
+- I’m currently working on ...
+- I’m currently learning ...
+- I’m looking to collaborate on ...
+- Want to reach out: [ElieWebDev](https://elieweb.dev)
+
+![Profile views](https://gpvc.arturio.dev/eliemugenzi)

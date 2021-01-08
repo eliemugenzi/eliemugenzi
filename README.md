@@ -4,11 +4,12 @@
 
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=eliemugenzi&layout=compact)
 
-To get started:
+### I am Elie Mugenzi
 
-- I’m currently working on ...
-- I’m currently learning ...
-- I’m looking to collaborate on ...
+- A Full-Stack Software Engineer
+- Skilled in Node, TypeScript, React, Vue, Gatsby, Nuxt, Next and GridSome
+- Focused on JavaScript, APIs and Markup stack (JAM Stack)
+- Currently working on E-Learning platform
 - Want to reach out: [ElieWebDev](https://elieweb.dev)
 
 ![Profile views](https://gpvc.arturio.dev/eliemugenzi)

@@ -4,8 +4,6 @@
 
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=eliemugenzi&layout=compact)
 
-[![Elie's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=eliemugenzi)](https://github.com/anuraghazra/github-readme-stats)
-
 
 ### I am Elie Mugenzi
 

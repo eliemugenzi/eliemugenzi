@@ -7,10 +7,10 @@
 
 ### I am Elie Mugenzi
 
-- A Full-Stack Software Engineer
+- A Full-Stack Software Engineer, currently working at [Irembo](https://irembo.com)
 - Skilled in Node, TypeScript, React, Vue, Gatsby, Nuxt, Next and GridSome
 - Focused on JavaScript, APIs and Markup stack (JAM Stack)
-- Currently working on E-Learning platform
+- Currently working on Health and Fitness awareness platform
 - Want to reach out: [ElieWebDev](https://elieweb.dev)
 
-![Profile views](https://gpvc.arturio.dev/eliemugenzi)
+

@@ -1,0 +1,10 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Main from "@components/Main.astro";
+import Jobs from '@components/Jobs';
+---
+
+<BaseLayout>
+    <Main />
+    <Jobs client:load />
+</BaseLayout>

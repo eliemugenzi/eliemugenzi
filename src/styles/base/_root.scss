@@ -1,0 +1,26 @@
+@use "../variables/colors";
+@use "../variables/theme" as *;
+@use "../variables/sizes" as *;
+@use "../variables/mixins" as *;
+
+:root {
+
+  @include set-theme-colors(colors.$dark);
+
+  &[data-theme=light] {
+   @include set-theme-colors(colors.$light)
+  }
+  
+// ## this is if you want to get user preference from the os 
+  // @if ($enable-media-query-dark-mode) {
+  //   @media (prefers-color-scheme: dark) {
+  //     @each $color, $shade-map in colors.$dark {
+  //       @each $shade, $value in $shade-map {
+  //         --#{$color}-#{$shade}: #{$value};
+  //       }
+  //     }
+  //   }
+  // }
+
+  
+}

@@ -1,0 +1,53 @@
+@use "../variables/shadow" as *;
+@use "../variables/functions" as *;
+@use "../variables/typography" as *;
+@use "../variables/colors" as *;
+@use "../variables/mixins";
+
+
+button,
+.button {
+  display: inline-block;
+  padding: size(2) size(6);
+  border-radius: 0.3rem;
+  font-size: $fs-xs;
+  font-weight: $fw-semi-bold;
+  text-decoration: none;
+  // background-image: $background--gradient;
+  color: var(--color-neutral-900);
+  cursor: pointer;
+  background-color: transparent;
+  border-color: $color-primary-400;
+  border-width: 1;
+
+
+  align-self: start;
+  // box-shadow: $shadow-subtle;
+
+  @include mixins.theme(light) {
+    background: var(--color-neutral-100);
+    background-image: $background--gradient-light;
+    box-shadow: $shadow-subtle-light;
+    border: 1px solid var(--color-neutral-300);
+  }
+}
+
+button[data-type="flat"] {
+  padding: 0;
+  background: transparent;
+  background-image: transparent;
+  border: none;
+  box-shadow: none;
+
+  @include mixins.theme(light) {
+    background: transparent;
+    background-image: transparent;
+    border: none;
+  }
+}
+
+button:is(:hover, :focus),
+.button:is(:hover, :focus) {
+  color: var(--color-neutral-900);
+  opacity: .7;
+}

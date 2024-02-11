@@ -1,0 +1,39 @@
+@use "../variables/typography" as *;
+
+// font sizes classes
+@each $size-name, $size-value in $font-sizes {
+  .fs-#{$size-name} {
+    font-size: $size-value;
+  }
+}
+
+// font weight classes
+@each $weight-name, $weight-value in $font-weights {
+  .fw-#{$weight-name} {
+    font-weight: $weight-value;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.decoration-none {
+  text-decoration: none;
+}
+
+.underline {
+  text-decoration: underline;
+  text-underline-offset: .25rem;
+}
+
+$lines: 1, 2, 3, 4, 5, 6;
+
+@each $line in $lines {
+  .line-clamp-#{$line} {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  }
+}

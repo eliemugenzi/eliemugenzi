@@ -1,0 +1,30 @@
+{
+  "extends": "astro/tsconfigs/base",
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "allowJs": true,
+    "baseUrl": "/Users/eliemugenzi/Projects/Personal/Portfolio/eliemugenzi/src",
+    "paths": {
+      "@lib/*": [
+        "lib/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@layouts/*": [
+        "layouts/*"
+      ],
+      "@assets/*": [
+        "assets/*"
+      ],
+      "@pages/*": [
+        "pages/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  }
+}

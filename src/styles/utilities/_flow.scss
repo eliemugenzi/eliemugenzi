@@ -1,0 +1,17 @@
+@use "../variables/functions" as *;
+
+/* this is for adding space between element in a container instead of adding 
+margin everywhere or even gap and flex, we can use flow classes */
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-spacer, size(5));
+}
+
+.flow-tight {
+  --flow-spacer: 1rem;
+}
+.flow-medium {
+  --flow-spacer: 2rem;
+}
+.flow-large {
+  --flow-spacer: 3rem;
+}

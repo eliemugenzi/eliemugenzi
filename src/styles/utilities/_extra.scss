@@ -1,0 +1,70 @@
+@use "../variables/sizes" as *;
+@use "../variables/functions" as *;
+
+// === Layout ===
+.flex {
+  display: flex;
+}
+
+.column{
+  flex-direction: column;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.hide{
+  display: none;
+}
+
+.block{
+  display: block;
+}
+
+@each $size, $value in $sizes {
+  .gap-#{$size} {
+    gap: $value;
+  }
+}
+
+
+// === text ===
+.text-center{
+  text-align: center;
+}
+
+// === border ===
+.radius{
+  border-radius: size(2);
+}
+
+.radius-flat{
+  border-radius: size(10);
+  border: none;
+}

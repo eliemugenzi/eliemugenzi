@@ -1,0 +1,24 @@
+---
+import Head from '@components/Head.astro';
+import NavBar from '@components/NavBar.astro';
+  export interface Props {
+    title?: string;
+    description?: string;
+}
+
+const { title="Elie Mugenzi's portfolio", description="Elie's personal site" } = Astro.props;
+---
+
+<!DOCTYPE html>
+
+<html lang="en" data-theme="dark">
+  <head>
+     <Head title={title} description={description} />
+  </head>
+  <body>
+    <div class="container container-wide">
+      <NavBar />
+      <slot />
+    </div>
+  </body>
+</html>

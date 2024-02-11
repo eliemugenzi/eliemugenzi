@@ -1,0 +1,25 @@
+---
+import '../styles/index.scss';
+
+export interface Props {
+    title?: string;
+    description?: string;
+}
+
+const { title="Elie Mugenzi's portfolio", description="Elie's personal site" } = Astro.props;
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<!-- <link rel="icon" href="/favicon.png"> -->
+<meta name="generator" content={Astro.generator} />
+<title>{title}</title>
+
+<!-- google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+  rel="stylesheet"
+/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700&display=swap" rel="stylesheet">

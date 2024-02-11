@@ -1,0 +1,191 @@
+---
+
+const menus: { label: string; href: string }[] = [
+  { label: "About", href: "#about" },
+  { label: "Experience", href: "#experience" },
+  { label: "Work", href: "#work" },
+  { label: "Contact", href: "#contact" },
+];
+---
+
+<div class="header py-4">
+  <div class="container container-wide">
+    <div  aria-hidden="true" aria-label="overlay" class="overlay" />
+    <div class="flex justify-between">
+      <a href="#" class="site-title | flex center gap-1 decoration-none">
+        <!-- <Icon icon="terminal" color="white" size="18px" /> -->
+        <span class="fw-semi-bold">Elie MUGENZI, MBE 🚀</span>
+      </a>
+      <nav class="primary-navigation" id="primary-navigation">
+        <ul class="flex center gap-4" aria-label="Primary Navigation">
+          {
+            menus.map((menu, index) => (
+              <li class="menu-item fs-sm fw-semi-bold text-primary-400">
+                <a href={menu.href} class="flex gap-1 decoration-none ">
+                  <span class="text-accent-200">0{index + 1}. </span>
+                  <span>{menu.label}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+     
+      </div>
+
+      <div class="mobile-nav-toggle | hide">
+        <!-- <Icon
+          icon="menu"
+          size="30"
+          data-onclick="nav:open"
+          type="button"
+          aria-controls="primary-navigation"
+          color="var(--color-neutral-600)"
+          aria-expanded="false"
+          aria-hidden="true"
+        />
+        <Icon
+          icon="close"
+          size="30"
+          class:list={["hide"]}
+          data-onclick="nav:close"
+          type="button"
+          aria-controls="primary-navigation"
+          color="var(--color-neutral-600)"
+          aria-expanded="true"
+          aria-hidden="true"
+        /> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  @use "../styles/variables/mixins" as *;
+  @use "../styles/variables/functions" as *;
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: rgba(var(--color-primary-700) / 15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .site-title{
+    border-bottom: 1px solid var(--color-primary-400);
+  }
+
+
+  .button-github {
+    line-height: 0;
+    padding-block: 0.35rem;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .overlay[data-visible] {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+  }
+
+  @include screen(mobile-tablet) {
+    .primary-navigation {
+      display: none;
+    }
+    .mobile-nav-toggle {
+      display: block;
+    }
+
+    a[data-visible="laptop"] {
+      display: none;
+    }
+
+    nav[data-visible] {
+      display: block;
+      position: fixed;
+      inset: size(11) size(4) auto;
+      padding-block: size(8);
+      border-radius: size(1);
+      background-color: #162447;
+      box-shadow: 0 0 1.2em 0.2em rgba(0, 0, 0, 0.1);
+      z-index: 10;
+
+      a[data-visible="mobile"] {
+        display: flex;
+        width: fit-content;
+        margin: size(6) auto 0;
+      }
+
+      @include theme(light) {
+        background-color: #eee;
+      }
+
+      ul {
+        flex-direction: column;
+        gap: size(6);
+      }
+    }
+  }
+</style>
+
+<script>
+  const primaryNav = document.querySelector(".primary-navigation");
+  const buttons = document.querySelectorAll("[data-onclick]");
+  const overlay = document.querySelector(".overlay");
+  const navOpenButton = document.querySelector(
+    'button[data-onclick="nav:open"]'
+  );
+  const navCloseButton = document.querySelector(
+    'button[data-onclick="nav:close"]'
+  );
+
+  const closeNavPopup = () => {
+    navOpenButton?.classList.remove("hide");
+    navCloseButton?.classList.add("hide");
+    primaryNav?.removeAttribute("data-visible");
+    overlay?.removeAttribute("data-visible");
+  };
+
+  buttons.forEach((button) => {
+    button?.addEventListener("click", () => {
+      const action = button.getAttribute("data-onclick")?.split(":");
+
+      // handle theme switching
+      if (action?.[0] === "theme") {
+        const mode = action?.[1] as "light" | "dark";
+        const htmlNode = document.querySelector("html[data-theme]");
+        htmlNode?.setAttribute("data-theme", mode);
+      }
+
+      // handle toggling navigation
+      if (action?.[0] === "nav") {
+        const actionType = action?.[1] as "open" | "close";
+
+        if (actionType === "open") {
+          navOpenButton?.classList.add("hide");
+          navCloseButton?.classList.remove("hide");
+          primaryNav?.setAttribute("data-visible", "");
+          overlay?.setAttribute("data-visible", "");
+        }
+
+        if (actionType === "close") {
+          console.log('here ', 'clicked')
+          closeNavPopup();
+        }
+      }
+    });
+  });
+
+  overlay?.addEventListener("click", () => {
+    if (primaryNav?.getAttribute("data-visible") === "") closeNavPopup();
+  });
+</script>

@@ -1,0 +1,41 @@
+---
+import { iconPaths, type iconPathsType } from '../constants/iconPaths';
+
+export type Props = {
+    icon: iconPathsType;
+    color?: string;
+    shade?: string;
+    gradient?: string;
+    size?: string;
+    type?: "normal" | "button";
+}
+
+const { icon,
+ color='currentcolor',
+  shade,
+  size,
+  type='normal',
+  ...props
+  } = Astro.props;
+
+  const properties = {
+  "{{color}}": color,
+  "{{size}}": size,
+  "{{shade}}": shade,
+};
+
+const formattedPath = Object.keys(properties).reduce((path: any, current) => {
+  return path?.replaceAll(current, properties[current]);
+}, iconPaths[icon] || iconPaths.default);
+
+---
+
+{
+    type === "button" ? (
+      <button data-type="flat" {...props}>
+        <Fragment set:html={formattedPath} />
+      </button>
+    ) : (
+      <Fragment set:html={formattedPath} />
+    )
+  }

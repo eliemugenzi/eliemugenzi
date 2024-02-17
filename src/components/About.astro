@@ -1,0 +1,235 @@
+---
+import Icon from "./Icon.astro";
+import { getEntry } from "astro:content";
+import { type iconPathsType } from "../constants/iconPaths";
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const { data: skills } = await getEntry("skills", "2024");
+
+const getIconName = (name: string): iconPathsType => {
+  const formattedName = name?.toLowerCase()?.replaceAll(/\/|\s/g, "-");
+  console.log("formatted name", formattedName);
+  return (formattedName || "javascript") as iconPathsType;
+};
+---
+
+<BaseLayout>
+  <section class="container container-narrow" id="about">
+    <h2 class="numbered-heading">About Me</h2>
+    <div class="inner">
+      <div class="about-text">
+        <p>
+          Hello, my name is Elie Mugenzi and I love creating things that live on
+          the internet. My interest came back in 2013 when I was in highschool,
+          and I was introduced to C++, HTML, CSS and PHP. <br />
+          Fast-forward to today, I've had a priviledge of working at <a
+            href="https://andela.com"
+            target="_blank">Andela</a
+          >, <a href="https://exuus.com" target="_blank">Exuus</a>, <a
+            href="https://bktechouse.rw"
+            target="_blank">BK TecHouse</a
+          > and <a href="https://irembo.com" target="_blank">Irembo</a>.
+        </p> <br>
+        <p>Here are a few technologies I've been working with recently:</p> <br>
+        <div class="flow flow-normal">
+          {
+            Object.keys(skills).map((skill) => (
+              <div>
+                <h4>{skill}</h4>
+                <div class="flex fs-xs fw-semi-bold gap-4 wrap mt-2">
+                    {skills[skill].map((skillName: string) => {
+                        console.log("SKILL NAME", skillName);
+                  return (
+                    <div class="flex gap-2 center tag">
+                      <Icon
+                        icon={getIconName(skillName)}
+                        size="25"
+                        color="black"
+                      />
+                      <span>{skillName}</span>
+
+                    </div>
+                  );
+                })}
+                    </div>
+              
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="wrapper">
+          <img
+            class="headshot"
+            src="https://avatars.githubusercontent.com/u/22316636?v=4"
+            alt="Headshot"
+            width={500}
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style lang="scss">
+  @use "./styles/variables/colors" as *;
+  @use "../styles/variables/mixins" as *;
+  @use "../styles/variables/functions" as *;
+
+  .numbered-heading {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px 0 40px;
+    width: 100%;
+    font-size: clamp(20px, 5vw, 30px);
+    white-space: nowrap;
+
+    &:before {
+      position: relative;
+      top: 5px;
+      counter-increment: section;
+      content: "0" counter(section) ".";
+      margin-right: 1rem;
+      color: var(--color-primary-400);
+      font-size: clamp(16px, 3vw, 20px);
+      font-weight: bold;
+
+      @media (max-width: 480px) {
+        margin-bottom: -3px;
+        margin-right: 5px;
+      }
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: relative;
+      top: 0.5rem;
+      width: 300px;
+      height: 1px;
+      margin-left: 20px;
+      background-color: var(--color-neutral-300);
+
+      @media (max-width: 1080px) {
+        width: 200px;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      @media (max-width: 600px) {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  #about {
+    margin-bottom: 3rem;
+    max-width: 900px;
+
+    .inner {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      grid-gap: 50px;
+
+      @include screen(mobile-tablet) {
+        display: block;
+      }
+    }
+  }
+
+  .hero-image {
+    position: relative;
+    max-width: 300px;
+
+    @include screen(mobile-tablet) {
+      width: 70%;
+      margin: 50px auto 0;
+    }
+
+    .wrapper {
+      display: block;
+      position: relative;
+      width: 100%;
+      border-radius: 4px;
+      background-color: var(--color-neutral-300);
+
+      &:hover,
+      &:focus {
+        outline: 0;
+        transform: translate(-4px, -4px);
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        &::after {
+          transform: translate(8px, 8px);
+          transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+
+        .headshot {
+          filter: none;
+          mix-blend-mode: normal;
+        }
+      }
+
+      .headshot {
+        position: relative;
+        border-radius: 4px;
+        mix-blend-mode: multiply;
+        filter: grayscale(100%) contrast(1);
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
+
+      &::before {
+        top: 0;
+        right: 0;
+        background-color: #64ffda;
+        mix-blend-mode: screen;
+      }
+
+      &::after {
+        border: 2px solid #64ffda;
+        top: 14px;
+        left: 14px;
+        z-index: -1;
+      }
+    }
+  }
+
+  .skill-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    grid-gap: 0 10px;
+    padding: 0;
+    margin: 20px 0 0 0;
+    overflow: hidden;
+    list-style: none;
+
+    li {
+      position: relative;
+      margin-bottom: 0.5rem;
+      padding-left: 20px;
+      font-size: small;
+
+      &::before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: #64ffda;
+        font-size: small;
+        line-height: 12px;
+      }
+    }
+  }
+</style>

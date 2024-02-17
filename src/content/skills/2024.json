@@ -1,0 +1,11 @@
+{
+    "Languages": ["JavaScript", "Go", "TypeScript", "Python"],
+    "Frameworks": [
+        "Node",
+        "React Native",
+        "React",
+        "Vue"
+    ],
+    "DevOps": ["Docker", "Circle CI", "Vitest", "Jest", "Cypress"],
+    "Database": ["Redis", "Postgres", "MySQL"]
+}

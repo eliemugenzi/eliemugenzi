@@ -8,7 +8,6 @@
     width: min(var(--max-width), 100% - var(--padding));
     margin-inline: auto;
 
-
     &.container-narrow {
       --max-width: #{$container-max-width-narrow};
     }

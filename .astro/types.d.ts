@@ -184,7 +184,60 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		
+		"experience": {
+"andela.md": {
+	id: "andela.md";
+  slug: "andela";
+  body: string;
+  collection: "experience";
+  data: InferEntrySchema<"experience">
+} & { render(): Render[".md"] };
+"bk.md": {
+	id: "bk.md";
+  slug: "bk";
+  body: string;
+  collection: "experience";
+  data: InferEntrySchema<"experience">
+} & { render(): Render[".md"] };
+"exuus.md": {
+	id: "exuus.md";
+  slug: "exuus";
+  body: string;
+  collection: "experience";
+  data: InferEntrySchema<"experience">
+} & { render(): Render[".md"] };
+"irembo.md": {
+	id: "irembo.md";
+  slug: "irembo";
+  body: string;
+  collection: "experience";
+  data: InferEntrySchema<"experience">
+} & { render(): Render[".md"] };
+};
+"projects": {
+"rwanda-phone-utils.md": {
+	id: "rwanda-phone-utils.md";
+  slug: "rwanda-phone-utils";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"save-plus.md": {
+	id: "save-plus.md";
+  slug: "save-plus";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"save.md": {
+	id: "save.md";
+  slug: "save";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+};
+
 	};
 
 	type DataEntryMap = {

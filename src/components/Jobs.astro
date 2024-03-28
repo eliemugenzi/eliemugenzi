@@ -1,0 +1,67 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import Icon from "./Icon.astro";
+
+const allExperiences = await getCollection("experience");
+const experiences = allExperiences.sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout>
+  <section class="container container-narrow mt-15 mb-15" id="experience">
+    <h2 class="numbered-heading">Where I've worked</h2>
+    <div class="job-list">
+      {
+        experiences.map(({ data }) => (
+          <div class="job mt-3">
+            <div class="job-duration">
+              <p class="fs-xs">{data.date.toUpperCase()}</p>
+            </div>
+            <div class="job-details">
+              <h4 class="text-primary-400">
+                {data.title} - {data.link?.map(([title, link]) => (
+              <a target="_blank" href={link} class="flex underline mt-1">
+                {title} <Icon icon="externallink" size="15" />
+              </a>
+            ))}
+              </h4>
+              <ul>
+                {data.description.map((jobDes) => (
+                  <li class="job-description fs-sm mb-3 mt-3">{jobDes}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
+
+<style lang="scss">
+  @use "../styles/variables/mixins" as *;
+  @use "../styles/variables/functions" as *;
+  @use "../styles/variables/colors" as *;
+
+  .job {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 0.5rem;
+    padding: 1.5rem;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+
+    @include screen(mobile-tablet) {
+        display: block;
+
+        .job-duration {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &:hover {
+      background-color: rgba($color-neutral-600, 0.5);
+      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+  }
+</style>

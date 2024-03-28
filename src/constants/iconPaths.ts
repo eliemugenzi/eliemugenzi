@@ -15,6 +15,9 @@ import circlecli from '@assets/icons/circle-cli.svg?raw';
 import vitest from '@assets/icons/vitest.svg?raw';
 import jest from '@assets/icons/jest.svg?raw';
 import cypress from '@assets/icons/cypress.svg?raw';
+import menu from '@assets/icons/menu.svg?raw';
+import close from '@assets/icons/close.svg?raw';
+import externallink from '@assets/icons/external-link.svg?raw';
 
 export const iconPaths = {
     javascript,
@@ -34,6 +37,9 @@ export const iconPaths = {
     vitest,
     jest,
     cypress,
+    menu,
+    close,
+    externallink,
 }
 
 export type iconPathsType = keyof typeof iconPaths;

@@ -8,14 +8,13 @@ const { data: skills } = await getEntry("skills", "2024");
 
 const getIconName = (name: string): iconPathsType => {
   const formattedName = name?.toLowerCase()?.replaceAll(/\/|\s/g, "-");
-  console.log("formatted name", formattedName);
   return (formattedName || "javascript") as iconPathsType;
 };
 ---
 
 <BaseLayout>
-  <section class="container container-narrow" id="about">
-    <h2 class="numbered-heading">About Me</h2>
+  <section class="container container-narrow mb-15" id="about">
+    <h2 class="numbered-heading">Who's this guy?</h2>
     <div class="inner">
       <div class="about-text">
         <p>
@@ -38,7 +37,6 @@ const getIconName = (name: string): iconPathsType => {
                 <h4>{skill}</h4>
                 <div class="flex fs-xs fw-semi-bold gap-4 wrap mt-2">
                     {skills[skill].map((skillName: string) => {
-                        console.log("SKILL NAME", skillName);
                   return (
                     <div class="flex gap-2 center tag">
                       <Icon
@@ -76,53 +74,6 @@ const getIconName = (name: string): iconPathsType => {
   @use "./styles/variables/colors" as *;
   @use "../styles/variables/mixins" as *;
   @use "../styles/variables/functions" as *;
-
-  .numbered-heading {
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin: 10px 0 40px;
-    width: 100%;
-    font-size: clamp(20px, 5vw, 30px);
-    white-space: nowrap;
-
-    &:before {
-      position: relative;
-      top: 5px;
-      counter-increment: section;
-      content: "0" counter(section) ".";
-      margin-right: 1rem;
-      color: var(--color-primary-400);
-      font-size: clamp(16px, 3vw, 20px);
-      font-weight: bold;
-
-      @media (max-width: 480px) {
-        margin-bottom: -3px;
-        margin-right: 5px;
-      }
-    }
-
-    &:after {
-      content: "";
-      display: block;
-      position: relative;
-      top: 0.5rem;
-      width: 300px;
-      height: 1px;
-      margin-left: 20px;
-      background-color: var(--color-neutral-300);
-
-      @media (max-width: 1080px) {
-        width: 200px;
-      }
-      @media (max-width: 768px) {
-        width: 100%;
-      }
-      @media (max-width: 600px) {
-        margin-left: 10px;
-      }
-    }
-  }
 
   #about {
     margin-bottom: 3rem;

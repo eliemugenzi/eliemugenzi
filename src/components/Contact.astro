@@ -1,0 +1,89 @@
+---
+import type { iconPathsType } from "constants/iconPaths"
+import Icon from "./Icon.astro"
+const socials: {
+    icon: iconPathsType,
+    link: string
+}[] = [
+    {
+        icon: 'x',
+        link: 'https://x.com/ElieMugenzi'
+    },
+    {
+        icon: 'instagram',
+        link: 'https://instagram.com/eliemugenzi'
+    },
+    {
+        icon: 'github',
+        link: 'https://github.com/github'
+    }
+]
+---
+<section id="contact" class="container container-narrow mt-15 mb-15">
+    <h2 class="numbered-heading">What's next?</h2>
+    <h3 class="text-center my-3">Get in touch.</h3>
+    <p class="mx-10">Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+    <h4 class="text-center my-10">Here are my socials</h4>
+    <div class="socials-list">
+     {socials.map((social)=>(
+        <a href={social.link} target="_blank">
+            <Icon icon={social.icon} />
+       </a>
+     ))}
+    </div>
+
+
+</section>
+
+<style lang="scss">
+    @use "../styles/variables/mixins";
+  @use "../styles/variables/functions" as *;
+
+  .numbered-heading {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px 0 40px;
+    width: 100%;
+    font-size: clamp(20px, 5vw, 30px);
+    white-space: nowrap;
+
+    &:before {
+      position: relative;
+      top: 5px;
+      counter-increment: section;
+      content: "04.";
+      margin-right: 1rem;
+      color: var(--color-primary-400);
+      font-size: clamp(16px, 3vw, 20px);
+      font-weight: bold;
+
+      @media (max-width: 480px) {
+        margin-bottom: -3px;
+        margin-right: 5px;
+      }
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: relative;
+      top: 0.5rem;
+      width: 300px;
+      height: 1px;
+      margin-left: 20px;
+      background-color: var(--color-neutral-300);
+
+      @media (max-width: 1080px) {
+        width: 200px;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      @media (max-width: 600px) {
+        margin-left: 10px;
+      }
+    }
+  }
+
+</style>

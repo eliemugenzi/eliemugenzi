@@ -18,6 +18,10 @@ import cypress from '@assets/icons/cypress.svg?raw';
 import menu from '@assets/icons/menu.svg?raw';
 import close from '@assets/icons/close.svg?raw';
 import externallink from '@assets/icons/external-link.svg?raw';
+import instagram from '@assets/icons/instagram.svg?raw';
+import x from '@assets/icons/x.svg?raw';
+import github from '@assets/icons/github.svg?raw';
+import mail from '@assets/icons/mail.svg?raw';
 
 export const iconPaths = {
     javascript,
@@ -40,6 +44,10 @@ export const iconPaths = {
     menu,
     close,
     externallink,
+    instagram,
+    x,
+    github,
+    mail,
 }
 
 export type iconPathsType = keyof typeof iconPaths;

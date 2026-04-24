@@ -10,15 +10,8 @@ I'm a Full-Stack Software Engineer with over six years of experience in backend 
 - **Senior Software Engineer** at RSSB Rwanda, contributing to national-scale digital solutions.
 - **Open Source Contributor** with projects like [`rwanda-phone-utils`](https://github.com/eliemugenzi/rwanda-phone-utils), a package for validating and formatting Rwandan phone numbers.
 
-|My Profile|Streaks|
-|-|-|
-|![Metrics](/github-metrics.svg)|![eliemugenzi](https://github-readme-streak-stats.herokuapp.com/?user=eliemugenzi&theme=dark)
+![eliemugenzi](https://github-readme-streak-stats.herokuapp.com/?user=eliemugenzi&theme=dark)
 ### Connect with me:
 [![Follow on Twitter](https://img.shields.io/badge/--twitter?label=Twitter&logo=Twitter&style=social)](https://twitter.com/ElieMugenzi) [![Connect on LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&style=social)](https://www.linkedin.com/in/ElieMugenzi) [![Send me email](https://img.shields.io/badge/--gmail?label=Gmail&logo=Gmail&style=social)](mailto:eliemugenzi@gmail.com)
 
-#### 🌐 Connect with Me
 
-- 🌍 [Website](https://elieweb.dev)
-- 💼 [LinkedIn](https://rw.linkedin.com/in/eliemugenzi)
-- 🐦 [Twitter](https://x.com/ElieMugenzi)
-- 🔗 [Linktree](https://linktr.ee/eliemugenzi)

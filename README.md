@@ -15,6 +15,8 @@ I'm a Full-Stack Software Engineer with over six years of experience in backend 
 |![Metrics](/github-metrics.svg)|![eliemugenzi](https://github-readme-streak-stats.herokuapp.com/?user=eliemugenzi&theme=dark)
 
 ### Connect with me:
-[![Follow on X](https://img.shields.io/badge/--twitter?label=Twitter&logo=Twitter&style=social)](https://twitter.com/ElieMugenzi) [![Connect on LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&style=social)](https://www.linkedin.com/in/ElieMugenzi) [![Send me email](https://img.shields.io/badge/--gmail?label=Gmail&logo=Gmail&style=social)](mailto:eliemugenzi@gmail.com)
+[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/ElieMugenzi)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ElieMugenzi)
+[![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:eliemugenzi@gmail.com)
 
 
